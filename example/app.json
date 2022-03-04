@@ -1,0 +1,22 @@
+{
+  "name": "react-native-resize-example",
+  "displayName": "Resize Example",
+  "expo": {
+    "name": "react-native-resize-example",
+    "slug": "react-native-resize-example",
+    "description": "Example app for react-native-resize",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
