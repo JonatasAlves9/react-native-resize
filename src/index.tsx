@@ -1,3 +1,5 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import { widthResize } from './packages/methods/widthResize';
+import { heightResize } from './packages/methods/heightResize';
+import { fontResize } from './packages/methods/fontResize';
+
+export { widthResize, heightResize, fontResize };
