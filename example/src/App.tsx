@@ -1,18 +1,23 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-resize';
+import { widthResize, fontResize } from 'react-native-resize';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <View style={styles.box}>
+        <Text style={styles.text}>Exemplo de texto</Text>
+      </View>
+      <View style={styles.box}>
+        <Text style={styles.text}>Exemplo de texto</Text>
+      </View>
+      <View style={styles.box}>
+        <Text style={styles.text}>Exemplo de texto</Text>
+      </View>
+      <View style={styles.box}>
+        <Text style={styles.text}>Exemplo de texto</Text>
+      </View>
     </View>
   );
 }
@@ -22,10 +27,17 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
   },
   box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    width: widthResize('20'),
+    height: widthResize('40'),
+    backgroundColor: 'red',
+    marginLeft: widthResize('2'),
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: fontResize('12'),
   },
 });
